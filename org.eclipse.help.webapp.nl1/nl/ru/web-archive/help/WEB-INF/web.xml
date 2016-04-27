@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>infocenter</display-name>
+  <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<filter>
+		<filter-name>DefaultFilter</filter-name>
+		<filter-class>
+			ru.grw.eclipse.servlet.DefaultFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>DefaultFilter</filter-name>
+		<url-pattern></url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>DefaultFilter</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+	<servlet id="iehs">
+		<description>Equinox Bridge Servlet</description>
+		<display-name>Equinox Bridge Servlet</display-name>
+		<servlet-name>equinoxbridgeservlet</servlet-name>
+		<servlet-class>org.eclipse.equinox.servletbridge.BridgeServlet</servlet-class>
+		<!--
+		  org.eclipse.equinox.servletbridge and the Servlet API are exported automatically to the underlying OSGi framework.
+		  The extendedFrameworkExports parameter allows the specification of additional java package exports.
+		  The format is a comma separated list of exports as specified by the "Export-Package" bundle manifest header.
+		  For example: com.mycompany.exports; version=1.0.0, com.mycompany.otherexports; version=1.0.0
+		  -->
+		<init-param>
+			<param-name>extendedFrameworkExports</param-name>
+			<param-value></param-value>			
+		</init-param>
+
+		<!-- 
+		  You can specify your own framework launcher here.
+		  The default is: org.eclipse.equinox.servletbridge.FrameworkLauncher
+		<init-param>
+			<param-name>frameworkLauncherClass</param-name>
+			<param-value>org.eclipse.equinox.servletbridge.FrameworkLauncher</param-value>
+		</init-param>	
+		-->	  
+		<!--  
+		Uncommenting this section will enable the OSGI debugging prompt       
+        <init-param>
+			<param-name>commandline</param-name>
+			<param-value>-console</param-value>			
+		</init-param>
+		-->	           
+        <init-param>
+			<param-name>other.info</param-name>
+			<param-value>org.eclipse.help</param-value>			
+		</init-param>			
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>equinoxbridgeservlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>equinoxbridgeservlet</servlet-name>
+		<url-pattern>*.jsp</url-pattern>
+	</servlet-mapping>
+
+</web-app>
