@@ -12,7 +12,8 @@
 <feature
       id="org.eclipse.help.infocenter_feature"
       label="Infocenter_feature Feature"
-      version="1.0.0">
+      version="1.0.0"
+      provider-name="RS ASU">
 
    <description>
       This feature contains all of the plugins required to create a
@@ -214,13 +215,6 @@ IBM Corporation - initial API and implementation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.core.runtime.compatibility"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.el"
          download-size="0"
          install-size="0"
@@ -228,7 +222,7 @@ IBM Corporation - initial API and implementation
          unpack="false"/>
 
    <plugin
-         id="org.apache.jasper.glassfish"
+         id="org.eclipse.core.net"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -263,13 +257,6 @@ IBM Corporation - initial API and implementation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jetty.security"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.jetty.util"
          download-size="0"
          install-size="0"
@@ -277,28 +264,14 @@ IBM Corporation - initial API and implementation
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jetty.continuation"
+         id="org.apache.jasper.glassfish"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ant.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.core.net"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.core.variables"
+         id="org.eclipse.jetty.security"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -306,6 +279,34 @@ IBM Corporation - initial API and implementation
 
    <plugin
          id="org.eclipse.equinox.security"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ru.grw.eclipse.infocenter"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.help.base.nl1"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.help.webapp.nl1"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ru.grw.eclipse.help"
          download-size="0"
          install-size="0"
          version="0.0.0"
