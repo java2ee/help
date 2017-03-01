@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: org.eclipse.help.base.nl1 Fragment
-Bundle-SymbolicName: org.eclipse.help.base.nl1
-Bundle-Version: 4.0.300
-Fragment-Host: org.eclipse.help.base;bundle-version="[4.0.300,4.1.0)"

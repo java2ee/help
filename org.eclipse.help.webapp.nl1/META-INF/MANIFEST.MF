@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: org.eclipse.help.webapp.nl1 Fragment
-Bundle-SymbolicName: org.eclipse.help.webapp.nl1
-Bundle-Version: 3.6.0
-Fragment-Host: org.eclipse.help.webapp;bundle-version="[3.6.0,3.8.0]"
-Bundle-Vendor: Nizhegodskiy ICC
